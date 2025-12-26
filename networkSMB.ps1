@@ -68,7 +68,7 @@ $submitButton.Add_Click({
     }
 
     # Execute the network drive mapping command
-    $command = "net use Z: \\192.168.1.113\home\Documents /user:$username $password"
+    $command = "net use Z: \\IP\home\Documents /user:$username $password"
     $result = cmd /c $command 2>&1
 
     if ($LASTEXITCODE -eq 0) {
